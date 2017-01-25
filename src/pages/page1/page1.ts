@@ -6,6 +6,8 @@ import { Http } from '@angular/http';
 
 import 'rxjs/add/operator/map';
 
+import { InAppBrowser } from 'ionic-native';
+
 
 @Component({
   selector: 'page-page1',
@@ -17,7 +19,8 @@ export class Page1 {
 
   public feeds: Array<string>;
   
-  private url: string = "https://www.reddit.com/new.json";
+  //private url: string = "https://www.reddit.com/new.json";
+  private url: string = "https://api.rss2json.com/v1/api.json?rss_url=http%3A%2F%2Fblackfridaytododia.com%2Ffeed%2F";
 
   constructor(public navCtrl: NavController, public http: Http, public loadingCtrl: LoadingController) {
     this.fetchContent();
@@ -31,7 +34,7 @@ export class Page1 {
     loading.present();
 
     this.http.get(this.url).map(res => res.json()).subscribe(data => {
-        this.feeds = data.data.children;        
+        this.feeds = data.items;        
         console.log(this.feeds);
         loading.dismiss();
 
@@ -39,8 +42,8 @@ export class Page1 {
   }
 
 
-  itemSelected(feed):void{
-    alert(feed.data.url);
+  itemSelected(url: string):void{
+     let browser = new InAppBrowser(url, '_system');
   }
 
 }

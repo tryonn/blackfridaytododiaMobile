@@ -1,0 +1,26 @@
+{
+	"status": "ok"
+	"feed": {
+	"url": ""
+	"title": ""
+	"link": ""
+	"author": ""
+	"description": ""
+	"content": ""
+}
+"items": 
+[ 
+	{ "title": "" 
+		"pubDate": "" "link": ""
+		"guid": ""
+		"author": ""
+		"thumbnail": ""
+		"description": ""
+		"enclosure": [ ]
+		"categories": [
+			"0": "Black Friday Todo dia"
+			"1": "Console Xbox One 500GB + 3 Jogos + Controle Sem Fio"
+			"2": "CONSOLES &amp; GAMES"
+		]
+	}
+]

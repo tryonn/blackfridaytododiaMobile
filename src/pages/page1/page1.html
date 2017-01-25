@@ -18,11 +18,11 @@
   <button ion-button secondary menuToggle>Toggle Menu</button>
 
   <ion-list>
-    <ion-item *ngFor="let feed of feeds" (click)="itemSelected(feed)">
+    <ion-item *ngFor="let feed of feeds" (click)="itemSelected(feed.link)">
       <ion-avatar item-right>
-        <img src="{{feed.data.thumbnail}}"></ion-avatar>
-      <h2>{{feed.data.title}}</h2>
-      <p>{{feed.data.domain}}</p>
+        <img src="{{feed.thumbnail}}"></ion-avatar>
+      <h2>{{feed.title}}</h2>
+      <p>{{feed.pubDate}}</p>
     </ion-item>
   </ion-list>
 
