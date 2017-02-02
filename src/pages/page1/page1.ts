@@ -59,4 +59,16 @@ export class Page1 {
     });
   }
 
+
+
+  doRefresh(refresher){
+    this.http.get(this.url).map(res => res.json()).subscribe(data => {
+        this.feeds = data.items;        
+        console.log(this.feeds);
+
+        this.noFilter = this.feeds;//noFilter rece dados da lista
+        refresher.complete();
+    });
+  }
+
 }

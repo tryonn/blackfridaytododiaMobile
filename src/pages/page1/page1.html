@@ -15,6 +15,19 @@
             placeholder="Type here..."
     ></ion-searchbar>
   </h3>
+
+  <!-- componente que recebe dados para criar lista para atualizacao de dados -->
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content pullingIcon="arrow-dropdown"
+      pullingText="Pull to refresh"
+      refreshingSpinner="circles"
+      refreshingText="Refreshing"
+    >
+      
+    </ion-refresher-content>
+  </ion-refresher>
+
+
   <ion-list>
     <ion-item *ngFor="let feed of feeds" (click)="itemSelected(feed.link)">
       <ion-avatar item-right>
