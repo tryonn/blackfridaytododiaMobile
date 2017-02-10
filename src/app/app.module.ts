@@ -13,7 +13,15 @@ import { HomePage } from '../pages/home/home';
     HomePage
   ],
   imports: [
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp, {
+      backButtonText: 'Go Back',
+      iconMode: 'ios',
+      modalEnter: 'modal-slide-in',
+      modalLeave: 'modal-slide-out',
+      tabsPlacement: 'bottom',
+      pageTransition: 'ios'
+      
+    },{})
   ],
   bootstrap: [IonicApp],
   entryComponents: [
