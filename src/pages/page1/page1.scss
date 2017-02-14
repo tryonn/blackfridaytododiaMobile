@@ -1,6 +1,25 @@
 page-page1 {
-	.page1-content
+
+	.toolbar-background-md
 	{
-		color: red;
+		background: black;
+		border-color: white;		
+	}
+	.toolbar-title-md
+	{
+		color: white;
+	}
+
+	ion-label 
+	{
+	  display: block;
+	  overflow: hidden;
+	  -webkit-flex: 1;
+	  -ms-flex: 1;
+	  flex: 1;
+	  margin: 0;
+	  font-size: inherit;
+	  text-overflow: ellipsis;
+	  white-space: none;
 	}
 }
